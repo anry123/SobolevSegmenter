@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Segmentation</category>
+  <title>SobolevSegmenter</title>
+  <description><![CDATA[Sobolev Segmentation based on Chan-Vese energy definition.]]></description>
+  <version>0.0.1</version>
+  <documentation-url>http://www.slicer.org/slicerWiki/index.php/Documentation/4.2/Modules/SobolevSegmenter</documentation-url>
+  <license>Slicer</license>
+  <contributor>Arie Nakhmani (UAB)</contributor>
+  <acknowledgements>This work was partially funded </acknowledgements>
+  <parameters>
+    <label>IO</label>
+    <description><![CDATA[Input/output volumes for Sobolev algorithm]]></description>
+    <image>
+      <name>inputVolume</name>
+      <label>Input Volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description><![CDATA[Input volume to be segmented]]></description>
+    </image>
+    <image>
+      <name>initialMask</name>
+      <label>Initial Mask</label>
+      <channel>input</channel>
+      <index>1</index>
+      <description><![CDATA[Initialization mask ]]></description>
+    </image>
+    <image type="label">
+      <name>outputVolume</name>
+      <label>Output Volume</label>
+      <channel>output</channel>
+      <index>2</index>
+      <description><![CDATA[Output filtered]]></description>
+    </image>
+  </parameters>
+  <parameters>
+    <label>Parameters</label>
+    <description><![CDATA[Input/output parameters for Sobolev algorithm]]></description>
+    <integer>
+      <name>numiter</name>
+      <longflag>numiter</longflag>
+      <label>Number of iterations</label>
+      <description><![CDATA[Number of iterations]]></description>
+      <default>30</default>
+      <minimum>1</minimum>
+      <maximum>1000</maximum>
+    </integer>
+    <float>
+      <name>lambda</name>
+      <longflag>lambda</longflag>
+      <label>Lambda</label>
+      <description><![CDATA[Kernel width parameter]]></description>
+      <default>0.1</default>
+      <minimum>0</minimum>
+      <maximum>1000</maximum>
+    </float>
+    <float>
+      <name>dt</name>
+      <longflag>dt</longflag>
+      <label>Step size</label>
+      <description><![CDATA[Step size for each iteration]]></description>
+      <default>1.0</default>
+      <minimum>0.001</minimum>
+      <maximum>50</maximum>
+    </float>
+  </parameters>
+</executable>
