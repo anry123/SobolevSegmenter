@@ -3,10 +3,11 @@ cmake_minimum_required(VERSION 2.8.7)
 #-----------------------------------------------------------------------------
 if(NOT Slicer_SOURCE_DIR)
   set(EXTENSION_NAME SobolevSegmenter)
-  set(EXTENSION_HOMEPAGE "http://www.slicer.org/slicerWiki/index.php/Documentation/4.2/Extensions/SobolevSegmenter")
+  set(EXTENSION_HOMEPAGE "http://www.slicer.org/slicerWiki/index.php/Documentation/Nightly/Modules/SobolevSegmenter")
   set(EXTENSION_CATEGORY "Segmentation")
-  set(EXTENSION_CONTRIBUTORS "Arie Nakhmani (UAB)")
+  set(EXTENSION_CONTRIBUTORS "Arie Nakhmani (UAB), Allen Tannenbaum (UAB)")
   set(EXTENSION_DESCRIPTION "Sobolev snake image segmentation algorithm")
+  set(EXTENSION_ICONURL "http://www.slicer.org/slicerWiki/images/8/83/SobolevSegmenter.png")
 endif()
 
 #-----------------------------------------------------------------------------

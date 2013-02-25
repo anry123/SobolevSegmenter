@@ -154,7 +154,7 @@ std::vector<float> xi_next, xi_prev, yi_next, yi_prev;
 	 for(cnt=0; cnt<sz_col*sz_row; cnt++){
 		 row = cnt % sz_row;
 		 col = cnt/sz_row;
-		 if (row>=minrow & row<=maxrow & col>=mincol & col<=maxcol)
+		 if (row>=minrow && row<=maxrow && col>=mincol && col<=maxcol)
 	         if(isInsidePolygon(xi,yi,row,col)){tmp1 += I[cnt]; tmp2++;}
 	         else{tmp3 += I[cnt]; tmp4++;}
 		 else
