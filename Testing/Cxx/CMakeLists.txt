@@ -14,10 +14,13 @@ set_target_properties(${CLP}Test PROPERTIES LABELS ${CLP})
 #-----------------------------------------------------------------------------
 set(testname ${CLP}Test)
 ExternalData_add_test(${CLP}Data NAME ${testname} COMMAND ${SEM_LAUNCH_COMMAND} $<TARGET_FILE:${CLP}Test>
-  --compare DATA{${BASELINE}/${CLP}Test.nhdr,${CLP}Test.raw}
+  --compare DATA{${BASELINE}/${CLP}Test.nrrd}
   ${TEMP}/${CLP}Test.nhdr
   ModuleEntryPoint
-  --sigma 2.5 DATA{${INPUT}/CTHeadAxial.nhdr,CTHeadAxial.raw.gz} ${TEMP}/${CLP}Test.nhdr
+    --numiter 30 --lambda 0.1 --dt 1.0
+    DATA{${INPUT}/${CLP}InputVolume.nrrd}        # inputVolume
+    DATA{${INPUT}/${CLP}InputVolume-label.nrrd}  # inputMask
+    ${TEMP}/${CLP}Test.nhdr                      # outputVolume
   )
 set_property(TEST ${testname} PROPERTY LABELS ${CLP})
 
