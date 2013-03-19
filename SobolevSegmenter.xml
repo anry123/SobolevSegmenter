@@ -4,9 +4,9 @@
   <title>SobolevSegmenter</title>
   <description><![CDATA[Sobolev Segmentation based on Chan-Vese energy definition.]]></description>
   <version>0.0.1</version>
-  <documentation-url>http://www.slicer.org/slicerWiki/index.php/Documentation/4.2/Modules/SobolevSegmenter</documentation-url>
+  <documentation-url>http://www.slicer.org/slicerWiki/index.php/Documentation/Nightly/Modules/SobolevSegmenter</documentation-url>
   <license>Slicer</license>
-  <contributor>Arie Nakhmani (UAB)</contributor>
+  <contributor>Arie Nakhmani (UAB), Allen Tannenbaum (UAB)</contributor>
   <acknowledgements>This work was partially funded </acknowledgements>
   <parameters>
     <label>IO</label>
