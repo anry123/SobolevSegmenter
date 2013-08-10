@@ -23,7 +23,7 @@ double Sobolev2D(const std::vector<double>& I2D, std::vector<bool>& BW2D, const 
 							 unsigned int numiter, double dt, double lambda, double epsilon);
 
 
-int main(int argc, const char *argv[])
+int main(int argc, char *argv[])
 {   
     PARSE_ARGS;
     // inputVolume.c_str() = input volume file name
